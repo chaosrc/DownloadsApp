@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.chao.downloadsapp.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:hint="请输入网址"/>
+
+        <Button
+            android:id="@+id/add_task"
+            android:layout_below="@+id/pause_button_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/add_layout"
+        android:id="@+id/download_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        >
+
+    </ListView>
+
+
+
+
+
+</RelativeLayout>

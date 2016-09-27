@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#668ddf">
+
+    <TextView
+        android:id="@+id/state_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在下载"
+        android:textColor="@color/download_text_color"/>
+    <LinearLayout
+        android:id="@+id/progressbar_layout"
+        android:orientation="horizontal"
+        android:layout_below="@+id/state_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/progressbar_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_weight="9"
+            android:layout_gravity="center_vertical"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            />
+        <ImageView
+            android:id="@+id/pause_button_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/ic_pause_white_24dp"
+            android:contentDescription="pause" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/percent_progress_download"
+        android:layout_below="@+id/progressbar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textColor="@color/download_text_color"/>
+    <TextView
+        android:id="@+id/size_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0MB"
+        android:layout_below="@id/progressbar_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/percent_progress_download"
+        android:textColor="@color/download_text_color"/>
+
+
+</RelativeLayout>
